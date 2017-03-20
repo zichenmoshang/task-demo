@@ -35,6 +35,7 @@
 		}
 	};
 	
+	//cache cart data and element
 	function cartCacheFn(){
 		let listInput = document.querySelectorAll('.list-input'),
 			cartDom = document.getElementById('footer'),
@@ -176,6 +177,7 @@
 				}
 			}
 		});	
+		//delegate event
 		listCache.dom.addEventListener('click',(e) => {
 			switch (e.target.tagName){
 				case 'I':
@@ -186,12 +188,14 @@
 					break;
 			}
 		});
+		//delegate event
 		listCache.dom.addEventListener('keydown',(e) => {
 			if(e.target.tagName === 'INPUT'){
 				//remember old value
 				cartCache.oldValue = e.target.value;
 			}
 		});
+		//delegate event
 		listCache.dom.addEventListener('keyup',(e) => {
 			let dom = e.target;
 			if(dom.tagName === 'INPUT'){
