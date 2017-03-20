@@ -140,7 +140,7 @@
 		    this.register();
 		    
 		}
-		register(type){
+		register(){
 			this.dom.addEventListener('touchstart',(e) => {
 				this.opsition.startX = e.touches[0].pageX;
 				this.opsition.startY = e.touches[0].pageY;
