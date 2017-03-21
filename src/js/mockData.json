@@ -1,0 +1,139 @@
+{
+	"tabItems" : [
+		{
+			"id": 0,
+			"name": "名称一"
+		},
+		{
+			"id": 1,
+			"name": "名称二"
+		},
+		{
+			"id": 2,
+			"name": "名称三"
+		},
+		{
+			"id": 3,
+			"name": "名称四"
+		},
+		{
+			"id": 4,
+			"name": "名称五"
+		},
+		{
+			"id": 5,
+			"name": "名称六"
+		}
+	],
+	"lists": [
+		[
+			{
+				"id": 0,
+				"groupId": 0,
+				"imgSrc": "image/0.jpg",
+				"title": "名称1",
+				"content": "描述内容描述内容",
+				"price": "$100",
+				"price": "$100"
+			},
+			{
+				"id": 1,
+				"groupId": 0,
+				"imgSrc": "image/0.jpg",
+				"title": "名称2",
+				"content": "描述内容描述内容",
+				"price": "$100"
+			}
+		],
+		[
+			{
+				"id": 2,
+				"groupId": 1,
+				"imgSrc": "image/0.jpg",
+				"title": "名称3",
+				"content": "描述内容描述内容",
+				"price": "$100"
+			},
+			{
+				"id": 3,
+				"groupId": 1,
+				"imgSrc": "image/0.jpg",
+				"title": "名称4",
+				"content": "描述内容描述内容",
+				"price": "$100"
+			}
+		],
+		[
+			{
+				"id": 4,
+				"groupId": 2,
+				"imgSrc": "image/0.jpg",
+				"title": "名称5",
+				"content": "描述内容描述内容",
+				"price": "$100"
+			},
+			{
+				"id": 5,
+				"groupId": 2,
+				"imgSrc": "image/0.jpg",
+				"title": "名称6",
+				"content": "描述内容描述内容",
+				"price": "$100"
+			}
+		],
+		[
+			{
+				"id": 6,
+				"groupId": 3,
+				"imgSrc": "image/0.jpg",
+				"title": "名称7",
+				"content": "描述内容描述内容",
+				"price": "$100"
+			},
+			{
+				"id": 7,
+				"groupId": 3,
+				"imgSrc": "image/0.jpg",
+				"title": "名称8",
+				"content": "描述内容描述内容",
+				"price": "$100"
+			}
+		],
+		[
+			{
+				"id": 8,
+				"groupId": 4,
+				"imgSrc": "image/0.jpg",
+				"title": "名称9",
+				"content": "描述内容描述内容",
+				"price": "$100"
+			},
+			{
+				"id": 9,
+				"groupId": 4,
+				"imgSrc": "image/0.jpg",
+				"title": "名称10",
+				"content": "描述内容描述内容",
+				"price": "$100"
+			}
+		],
+		[
+			{
+				"id": 10,
+				"groupId": 5,
+				"imgSrc": "image/0.jpg",
+				"title": "名称11",
+				"content": "描述内容描述内容",
+				"price": "$100"
+			},
+			{
+				"id": 11,
+				"groupId": 5,
+				"imgSrc": "image/0.jpg",
+				"title": "名称12",
+				"content": "描述内容描述内容",
+				"price": "$100"
+			}
+		]
+	]
+}

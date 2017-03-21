@@ -53,7 +53,7 @@
 		tab(data) {
 			let dom = document.getElementById('tabs');
 			let tpl = [];
-			for(let i = 0,len = data.length;i < len;i++) {
+			for(let i = 0, len = data.length; i < len; i++) {
 				tpl.push(`<li class="tab-item ${i === 0 ? 'active' : ''}" data-index="${data[i].id}">${data[i].name}</li>`);
 			}
 			tpl = tpl.join("");
@@ -93,7 +93,7 @@
 			dom.innerHTML = tpl;
 		}
 	}
-	
+
 	/*
 	 * throttle,60 frames per second
 	 * @param {function} callback
@@ -102,7 +102,7 @@
 	 * id => timeoutId   
 	 * lastTime => next lastTime
 	 * */
-	function throttle(callback,lastTime) {
+	function throttle(callback, lastTime) {
 		let currTime = new Date().getTime();
 		let timeToCall = Math.max(0, 16 - (currTime - lastTime));
 		let id = setTimeout(function() {
@@ -114,14 +114,14 @@
 			lastTime: lastTime
 		};
 	};
-	
+
 	/*
 	 *  class Scroll
 	 *  @param {documentId} id
 	 *  @param {function} fn 
- 	 * */
-	class Scroll{
-		constructor(id,fn) {
+	 * */
+	class Scroll {
+		constructor(id, fn) {
 			this.dom = document.getElementById(id);
 			this.fn = fn;
 			this.opsition = {
@@ -137,18 +137,18 @@
 				id: undefined,
 				lastTime: 0
 			};
-		    this.register();
-		    
+			this.register();
+
 		}
-		register(){
-			this.dom.addEventListener('touchstart',(e) => {
+		register() {
+			this.dom.addEventListener('touchstart', (e) => {
 				this.opsition.startX = e.touches[0].pageX;
 				this.opsition.startY = e.touches[0].pageY;
 				let matchArr = this.dom.style.transform.match(/(-?\d+\.?\d*)(?=px)/g);
 				this.opsition.left = Number(matchArr[0]);
 				this.opsition.top = Number(matchArr[1]);
 			})
-			this.dom.addEventListener('touchmove',(e) => {
+			this.dom.addEventListener('touchmove', (e) => {
 				if(!this.ticking) {
 					this.opsition.endX = e.touches[0].pageX;
 					this.opsition.endY = e.touches[0].pageY;
@@ -156,24 +156,23 @@
 					let deltaY = this.opsition.top + this.opsition.endY - this.opsition.startY;
 					this.raf = throttle(() => {
 						this.ticking = false;
-						if(typeof this.fn === 'function'){
+						if(typeof this.fn === 'function') {
 							this.fn({
 								deltaX: deltaX,
 								deltaY: deltaY
 							});
 						}
-					},this.raf.lastTime);
+					}, this.raf.lastTime);
 				};
 				this.ticking = true;
 			})
-			this.dom.addEventListener('touchend',(e) => {
+			this.dom.addEventListener('touchend', (e) => {
 				this.ticking = false;
 				clearTimeout(this.raf.id);
 			})
 		}
 	}
-	
-	
+
 	var Tools = {
 		domLoaded: domLoaded,
 		getJson: getJson,
